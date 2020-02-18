@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+<pattern>*</pattern>
+    <template>
+        Hi! I am the CS department career advice bot. 
+        I will help you identify your strengths, 
+        and help to decide which career options to consider.
+        Would you like to continue?
+        <button>
+            <text>Yes Please</text>
+            <postback>yesplease</postback>
+        </button>
+        <button>
+            <text>No thank you</text>
+            <postback>nothanks</postback>
+        </button>
+    </template>
+</category>
+    
+<!--category>
+    <pattern>_</pattern>
+    <that>WHAT IS YOUR EMAIL ADDRESS</that>
+    <template>
+        <think><set name="emailaddress"><star/></set></think>
+        Great. Can I pass that to our support team?
+        <button>
+            <text>Yes</text>
+            <url>mailto:support@company.com?Subject=New Email Address&amp;Body=A new email address: <get name="emailaddress"/></url>
+        </button>
+        <button>
+            <text>No thank you</text>
+            <postback>nothanks</postback>
+        </button>
+    </template>
+</category-->
+ 
+<category>
+    <pattern>YESPLEASE</pattern>
+    <template>
+        How good are you at Critical Thinking?
+        <button>
+            <text>Strong</text>
+            <postback>strongcritical</postback>
+        </button>
+        <button>
+            <text>Not So Strong</text>
+            <postback>notsostrongcritical</postback>
+        </button>
+    </template>
+</category>    
+<category>
+    <pattern>STRONGCRITICAL</pattern>
+    <template>
+        Ok, How good are you at Active Learning?
+        <button>
+            <text>Strong</text>
+            <postback>strongactive</postback>
+        </button>
+        <button>
+            <text>Not So Strong</text>
+            <postback>notsostrongactive</postback>
+        </button>
+    </template>
+</category> 
+<category>
+    <pattern>STRONGACTIVE</pattern>
+    <template>
+        Ok, How good are you at Complex Problem Solving?
+        <button>
+            <text>Strong</text>
+            <postback>strongsolving</postback>
+        </button>
+        <button>
+            <text>Not So Strong</text>
+            <postback>notsostrongsolving</postback>
+        </button>
+    </template>
+</category> 
+<category>
+    <pattern>NOTSOSTRONGACTIVE</pattern>
+    <template>
+        You look like a good fit for Computer Systems Engineer Job.
+    </template>
+</category>
+<category>
+    <pattern>STRONGSOLVING</pattern>
+    <template>
+        You look like a good fit for Database Adminsitrator Job.
+    </template>
+</category> 
+<category>
+    <pattern>NOTSOSTRONGSOLVING</pattern>
+    <template>
+        You look like a good fit for Computer Hardware Engineer Job.
+    </template>
+</category>
+<category>
+    <pattern>NOTSOSTRONGCRITICAL</pattern>
+    <template>
+        Ok, How good are you at Active Listening?
+        <button>
+            <text>Strong</text>
+            <postback>stronglistening</postback>
+        </button>
+        <button>
+            <text>Not So Strong</text>
+            <postback>notsostronglistening</postback>
+        </button>
+    </template>
+</category> 
+<category>
+    <pattern>STRONGLISTENING</pattern>
+    <template>
+        You look like a good fit for Computer Systems Analyst Job.
+    </template>
+</category> 
+<category>
+    <pattern>NOTSOSTRONGLISTENING</pattern>
+    <template>
+        Ok, how good are you at Math and Complex problem solving.
+        <button>
+            <text>Strong</text>
+            <postback>strongmath</postback>
+        </button>
+        <button>
+            <text>Not So Strong</text>
+            <postback>notsostrongmath</postback>
+        </button>
+    </template>
+</category>
+<category>
+    <pattern>STRONGMATH</pattern>
+    <template>
+        You look like a good fit for Software Developer Job.
+    </template>
+</category> 
+<category>
+    <pattern>NOTSOSTRONGMATH</pattern>
+    <template>
+        Sorry I am not sure I could help you. Please set up an appointment with a Career Advisor.
+    </template>
+</category>
+<category>
+    <pattern>NOTHANKS</pattern>
+    <template>
+        Ok, no problem!
+    </template>
+</category>
+</aiml>
